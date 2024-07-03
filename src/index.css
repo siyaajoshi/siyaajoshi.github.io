@@ -16,6 +16,10 @@ body {
   justify-content: start;
 }
 
+.my-paragraph {
+  margin-bottom: 1rem;
+}
+
 body,
 html {
   scroll-behavior: smooth;

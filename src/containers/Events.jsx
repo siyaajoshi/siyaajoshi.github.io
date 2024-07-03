@@ -1,13 +1,11 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { about } from "../assets";
-import { ProjectsData } from "../utils/helper";
-import { FaGithub } from "react-icons/fa6";
+import { EventsData } from "../utils/helper";
 import { useState } from "react";
-const Projects = () => {
+const Events = () => {
   return ( 
   <section
-  id="projects" 
+  id="Events" 
   className="flex items-center justify-center flex-col gap-12 my-12"
   >
     {/*Title */}
@@ -19,15 +17,15 @@ const Projects = () => {
         transition={{delay: 0.4 }}
         className=""flex items-center justify-around w-52> 
         <p className="text-transparent bg-clip-text bg-gradient-to-r text-white text-2xl"
-        >--- Projects ---</p>
+        >--- Events ---</p>
       </motion.div>
     </div>
 
     {/*/main content */}
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
       <AnimatePresence>
-        {ProjectsData && ProjectsData.map((project,index) => (
-          <ProjectCard key= {project.id} project={project} />
+        {EventsData && EventsData.map((Events,index) => (
+          <EventsCard key= {Events.id} Events={Events} />
         ))}
       </AnimatePresence>
     </div>
@@ -35,11 +33,11 @@ const Projects = () => {
   );
 };
 
-const ProjectCard = ({project}) => {
+const EventsCard = ({Events}) => {
   const [isHoverred, setIsHoverred] = useState(false);
   return (
     <motion.div 
-    key = {project.id} 
+    key = {Events.id} 
     className="overflow-hidden cursor-pointer relative rounded-md" 
     onMouseEnter={() => setIsHoverred(true)}
     onMouseLeave={() => setIsHoverred(false)}
@@ -47,20 +45,15 @@ const ProjectCard = ({project}) => {
      <motion.img 
       whileHover={{ scale: 1.1}}
       className="w-full h-full object-contain rounded-lg" 
-      src={project.imgSrc} />
+      src={Events.imgSrc} />
 
       {isHoverred && (
-        <motion.div className="absolute inset-0 backdrop-blur-md bg[rgba(0,0,0,0.6)] flex items-center justify-center flex-col gap-2">
-          <p className="text-xl text-primary">{project?.name}</p>
-          <a href={project?.gitURL} className="">
-            <FaGithub className="text-3xl text-white hover:text-primary" /> {/* Other icons remain white */}
-          </a>
-
-        </motion.div>
+      <motion.div className="absolute inset-0 backdrop-blur-md bg[rgba(0,0,0,0.6)] flex items-center justify-center flex-col gap-2 ">
+        <p className="text-xl text-white">{Events?.name}</p>
+      </motion.div>
       )}
-        </motion.div>
-
+     </motion.div>
   );
 };
 
-export default Projects;
+export default Events;

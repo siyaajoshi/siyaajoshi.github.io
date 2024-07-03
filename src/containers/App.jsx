@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Home } from "./";
+import { Header, Home, ServiceCount, About, Skills, Projects, Contact, Events} from "./";
 
 const App = () => {
   return (
@@ -9,21 +9,28 @@ const App = () => {
 
      {/* particles container (Background) */}
      
-      {/*header */}
+    {/*header */}
     <Header />
-      {/* home container */}
+    {/* home container */}
     <Home />
 
-      {/* about container */}
+    { /* services count cards */}
+    <ServiceCount />
 
-      {/* skills container */}
+    {/* about container */}
+    <About />
+    {/* skills container */}
+    <Skills/>
+    {/* projects container */}
+    <Projects/>
+   
+    {/* Events container */}
+    <Events/>
 
-      {/* projects container */}
+    {/* contact container */}
+    <Contact/>
 
-
-      {/* contact container */}
-
-      {/* footer container */}
+    {/* footer container */}
     </div>
   );
 };
