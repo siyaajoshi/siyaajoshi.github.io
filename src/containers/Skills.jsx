@@ -41,12 +41,13 @@ const Skills = () => {
       <p className="text-transparent bg-clip-text bg-gradient-to-r text-white">
          💼 Work Experience </p>
         <p className="text-texlight text-base tracking-wide text-justify">
-          Add about me content </p>
+          Royal Bank of Canada, Longview Systems </p>
 
       <p className="text-transparent bg-clip-text bg-gradient-to-r text-white"
           >🏅 Certifications </p>
         <p className="text-texlight text-base tracking-wide text-justify">
-          Add about me content </p>
+          AZ-900 (Azure Fundamentals) 
+          SC-900 (Security, Compliance, and Identity Fundamentals)</p>
         </div> 
 
         {/* image section */}
