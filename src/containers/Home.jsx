@@ -48,7 +48,7 @@ const Home = () => {
     </div>
 
     {/* My Resume */}
-    <a href="https://drive.google.com/uc?id=1jSRBWGoqfJHZ8NYrX8UeubY2nqrmiO1x&export=download"
+    <a href="https://drive.google.com/uc?export=download&id=1vrlzCmlv3HmimKtf2UWuj1gWcu5p3Unq"
        download="Siya_Joshi_Resume.pdf"
        style={{ boxShadow: "inset 0px 0px 10px rgba(255,255,255,0.3" }}
        className="mt-12 border border-[rgba(255,255,255,0.3)] rounded-xl px-8 py-3 active:95 group hover:border-primary">
